@@ -1,0 +1,23 @@
+{
+    "name": "mix5003/l5-gcs",
+    "description": "Laravel 5.5+ Flysystem Google Cloud Storage Service Provider",
+    "keywords": ["laravel", "laravel5", "flysystem", "gcs"],
+    "type": "library",
+    "require": {
+        "illuminate/filesystem": "~5.5",
+        "illuminate/support": "~5.5",
+        "cedricziel/flysystem-gcs": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sorrawut Kittikeereechaikun",
+            "email": "mix5003@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "mix5003\\GCSProvider\\": "src/"
+        }
+    }
+}
