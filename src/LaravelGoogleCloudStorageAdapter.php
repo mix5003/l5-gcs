@@ -25,4 +25,22 @@ class LaravelGoogleCloudStorageAdapter extends GoogleCloudStorageAdapter
             ->object($path)
             ->signedUrl($expiration, $options);
     }
+
+    /**
+     * Converts flysystem specific config to options for the underlying API client
+     *
+     * @param $config Config
+     *
+     * @return array
+     */
+    protected function getOptionsFromConfig(Config $config)
+    {
+        $options = parent::getOptionsFromConfig($config);
+
+        if ($config->has('metadata')) {
+            $options['metadata'] = $config->get('metadata');
+        }
+
+        return $options;
+    }
 }
