@@ -1,3 +1,20 @@
+**Archived:** You can use Google CLoud Storage by standard S3 Driver (see [interoperability](https://cloud.google.com/storage/docs/interoperability)). 
+
+Sample Config  in filesystems.php 
+```php
+        'gcs' => [
+            'driver' => 's3',
+            'key' => env('GCS_HMAC_KEY'),
+            'secret' => env('GCS_HMAC_SECRET'),
+            'region' => 'auto',
+            'endpoint' => 'https://storage.googleapis.com/' . env('GCS_ATTACHMENT_BUCKET') . '/',
+            'bucket' => env('GCS_ATTACHMENT_BUCKET'),
+            'bucket_endpoint' => true,
+            'options' => ['ACL' => 'project-private'], // see more https://cloud.google.com/storage/docs/access-control/lists#predefined-acl
+        ],
+```
+
+
 # Google Cloud Storage ServiceProvider for Laravel 5.5+
 
 Just Wraps [cedricziel/flysystem-gcs](https://github.com/cedricziel/flysystem-gcs) in a Laravel 5.5+ compatible Service Provider. and add some other functionality that I need.
