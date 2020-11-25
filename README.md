@@ -1,4 +1,5 @@
-**Archived:** You can use Google CLoud Storage by standard S3 Driver (see [interoperability](https://cloud.google.com/storage/docs/interoperability)). 
+# Archived:
+You can use Google CLoud Storage by standard S3 Driver (see [interoperability](https://cloud.google.com/storage/docs/interoperability)). 
 
 Sample Config  in filesystems.php 
 ```php
@@ -14,6 +15,7 @@ Sample Config  in filesystems.php
         ],
 ```
 
+<hr>
 
 # Google Cloud Storage ServiceProvider for Laravel 5.5+
 
